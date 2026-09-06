@@ -13,10 +13,14 @@ import sqlite3
 from datetime import datetime
 
 DOSSIER = os.path.dirname(os.path.abspath(__file__))
-DB = os.path.join(DOSSIER, "journal_decisions.db")
+# Chemin configurable : en local, fichier a cote du code ; sur Render, pointer
+# la variable TERANGASCORE_DB vers un disque persistant (ex. /var/data/journal.db).
+DB = os.environ.get("TERANGASCORE_DB", os.path.join(DOSSIER, "journal_decisions.db"))
 
 
 def _conn():
+    dossier = os.path.dirname(os.path.abspath(DB))
+    os.makedirs(dossier, exist_ok=True)
     c = sqlite3.connect(DB)
     c.row_factory = sqlite3.Row
     return c

@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from terangascore_scorer import (load_artefact, scorer_client,
                                   load_artefact_survie, courbe_survie_client)
+import journal
 
 st.set_page_config(page_title="TerangaScore", page_icon="🛡️", layout="wide")
 
@@ -95,6 +96,18 @@ if submit:
                anciennete_mobile_money_mois=anc_mm)
     r = scorer_client(raw, art)
 
+    # Survie (calculee une fois, reutilisee pour l'affichage et le journal)
+    mois = proba = None
+    s12 = None
+    if art_survie is not None:
+        mois, proba, s12 = courbe_survie_client(r["features"], art_survie)
+
+    # Journalisation de la decision (SQLite, piste d'audit / mode hors ligne)
+    try:
+        journal.enregistrer(raw, r["score"], r["proba_defaut"], r["decision"], s12)
+    except Exception:
+        pass
+
     st.divider()
     g1, g2, g3 = st.columns([1,1,2])
     g1.metric("Score TerangaScore", r["score"])
@@ -138,7 +151,6 @@ if submit:
         st.markdown('<div class="block">La scorecard dit <b>si</b> le client risque de faire defaut. '
                     "L'analyse de survie dit <b>quand</b> : voici la probabilite que ce client "
                     "n'ait PAS fait defaut au fil des mois.</div>", unsafe_allow_html=True)
-        mois, proba, s12 = courbe_survie_client(r["features"], art_survie)
 
         sv1, sv2 = st.columns([2, 1])
         with sv1:
@@ -164,3 +176,23 @@ if submit:
         st.caption("Astuce : lancez `python entrainer_survie.py` pour activer la courbe de survie individuelle.")
 else:
     st.info("Renseignez le profil du demandeur puis cliquez sur **Calculer le score**.")
+
+# ----------------------------------------------------------------------
+# Portefeuille : statistiques lues dans le journal SQLite (mode hors ligne)
+# ----------------------------------------------------------------------
+st.divider()
+with st.expander("Portefeuille journalise (piste d'audit, base SQLite)", expanded=False):
+    try:
+        stt = journal.statistiques()
+    except Exception:
+        stt = {"total": 0}
+    if stt.get("total", 0) == 0:
+        st.caption("Aucune decision enregistree pour l'instant. Chaque calcul de score est trace ici.")
+    else:
+        p1, p2, p3, p4 = st.columns(4)
+        p1.metric("Decisions", stt["total"])
+        p2.metric("Taux d'acceptation", f"{stt['taux_acceptation']*100:.0f}%")
+        p3.metric("Montant total accorde", f"{stt['montant_total_accorde']:,.0f} FCFA".replace(",", " "))
+        p4.metric("Score moyen", stt["score_moyen"])
+        st.caption("Dernieres decisions :")
+        st.dataframe(pd.DataFrame(journal.dernieres(15)), use_container_width=True, hide_index=True)

@@ -1,0 +1,24 @@
+# Blueprint de deploiement Render pour l'interface TerangaScore (Streamlit).
+# Sur Render : New + > Blueprint, pointer sur ce depot ; Render lit ce fichier.
+services:
+  - type: web
+    name: teranga-score
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.9
+      # Chemin de la base SQLite. Sur l'offre gratuite, le disque est ephemere
+      # (les donnees repartent a zero apres une mise en veille ou un redeploiement).
+      # Pour une persistance durable, passer sur une offre payante et ajouter un
+      # bloc "disk" ci-dessous, puis pointer TERANGASCORE_DB vers son point de montage.
+      - key: TERANGASCORE_DB
+        value: /tmp/journal_decisions.db
+    # Persistance durable du journal (offre payante uniquement) :
+    # decommenter et fixer TERANGASCORE_DB a /var/data/journal_decisions.db
+    # disk:
+    #   name: donnees
+    #   mountPath: /var/data
+    #   sizeGB: 1

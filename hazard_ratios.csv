@@ -1,0 +1,13 @@
+﻿covariate,coef,hazard_ratio,HR_bas_95,HR_haut_95,p_value
+hist_Mauvais,1.057,2.878,2.307,3.591,0.0
+taux_effort,0.79,2.204,2.095,2.318,0.0
+hist_Nouveau,0.447,1.563,1.304,1.874,0.0
+hist_Moyen,0.228,1.256,1.047,1.507,0.014
+secteur_agricole,0.224,1.251,1.083,1.444,0.002
+montant_credit_fcfa,-0.005,0.995,0.916,1.081,0.901
+age,-0.056,0.946,0.884,1.012,0.109
+credit_solidaire,-0.133,0.875,0.764,1.003,0.055
+nombre_credits_anterieurs,-0.167,0.846,0.771,0.929,0.0
+anciennete_membre_ans,-0.184,0.832,0.758,0.913,0.0
+epargne_moyenne_fcfa,-0.207,0.813,0.737,0.898,0.0
+revenu_mensuel_fcfa,-0.21,0.811,0.739,0.889,0.0

@@ -1,0 +1,20 @@
+# Journal runtime (donnees generees a l'execution)
+journal_decisions.db
+
+# Logs et temporaires
+*.log
+compile*.log
+c1.log
+c2.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# LaTeX auxiliaires
+*.aux
+*.out
+*.toc
+*.synctex.gz

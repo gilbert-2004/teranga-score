@@ -1,0 +1,31 @@
+﻿variable,description,type
+id_client,Identifiant unique du client,texte
+pays,Pays UEMOA de la cooperative,categoriel
+zone,Zone de residence (Urbain/Rural),categoriel
+sexe,Sexe du client,categoriel
+age,Age en annees,numerique
+situation_matrimoniale,Situation matrimoniale,categoriel
+personnes_a_charge,Nombre de personnes a charge,numerique
+niveau_instruction,Niveau d'instruction,categoriel
+secteur_activite,Secteur d'activite economique,categoriel
+statut_activite,Formel ou informel,categoriel
+anciennete_activite_ans,Anciennete dans l'activite (annees),numerique
+revenu_mensuel_fcfa,Revenu mensuel estime (FCFA),numerique
+anciennete_membre_ans,Anciennete comme membre de la cooperative (annees),numerique
+nombre_credits_anterieurs,Nombre de credits deja obtenus,numerique
+historique_remboursement,Qualite de remboursement passee,categoriel
+epargne_moyenne_fcfa,Solde d'epargne moyen (FCFA),numerique
+type_credit,Credit individuel ou groupe/solidaire,categoriel
+possede_garant,Presence d'un garant/caution,categoriel
+objet_credit,Objet du credit demande,categoriel
+montant_credit_fcfa,Montant du credit demande (FCFA),numerique
+duree_credit_mois,Duree du credit (mois),numerique
+taux_interet_annuel_pct,Taux d'interet annuel (%),numerique
+mensualite_fcfa,Echeance mensuelle estimee (FCFA),numerique
+taux_effort,Mensualite / revenu mensuel,numerique
+ratio_epargne_credit,Epargne / montant du credit,numerique
+possede_mobile_money,Utilise le mobile money,categoriel
+volume_mm_mensuel_fcfa,Volume mensuel de transactions mobile money (FCFA),numerique
+frequence_mm_mensuelle,Nombre de transactions mobile money par mois,numerique
+anciennete_mobile_money_mois,Anciennete du compte mobile money (mois),numerique
+defaut,"Cible : 1 = defaut de remboursement, 0 = bon payeur",binaire

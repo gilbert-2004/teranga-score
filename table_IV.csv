@@ -1,0 +1,29 @@
+﻿variable,IV,pouvoir_predictif
+taux_effort,1.005537598563326,suspect (>0.5)
+ratio_epargne_credit,0.6226821771893177,suspect (>0.5)
+duree_credit_mois,0.44811129643323216,fort
+mensualite_fcfa,0.35199488791759226,fort
+epargne_moyenne_fcfa,0.3446826377581262,fort
+historique_remboursement,0.29739434177312896,moyen
+anciennete_membre_ans,0.21983451300097157,moyen
+nombre_credits_anterieurs,0.17711303971347067,moyen
+revenu_mensuel_fcfa,0.15317401159379188,moyen
+secteur_activite,0.07628379007992224,faible
+volume_mm_mensuel_fcfa,0.05085128832201641,faible
+age,0.03942174172595466,faible
+montant_credit_fcfa,0.03857460796712801,faible
+anciennete_activite_ans,0.03634567249856482,faible
+pays,0.02863610268334417,faible
+niveau_instruction,0.027324843839159466,faible
+possede_garant,0.014682861506720716,inutile
+statut_activite,0.01384146481315059,inutile
+taux_interet_annuel_pct,0.012776518072657861,inutile
+situation_matrimoniale,0.011117509713879948,inutile
+type_credit,0.009409610521940717,inutile
+anciennete_mobile_money_mois,0.006251032909052732,inutile
+zone,0.004505531542622013,inutile
+objet_credit,0.003377089917829968,inutile
+personnes_a_charge,0.002417646195705938,inutile
+frequence_mm_mensuelle,0.002122470912496524,inutile
+sexe,0.0014711202864028023,inutile
+possede_mobile_money,0.00033586219710395895,inutile

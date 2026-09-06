@@ -1,0 +1,88 @@
+﻿variable,classe,WOE,points
+taux_effort,"(-inf, 0.257]",1.7234,63.6
+taux_effort,"(0.257, 0.378]",1.016,51.5
+taux_effort,"(0.378, 0.52]",0.506,42.8
+taux_effort,"(0.52, 0.776]",-0.034,33.5
+taux_effort,"(0.776, inf]",-1.2798,12.2
+ratio_epargne_credit,"(-inf, 0.046]",-0.8528,23.0
+ratio_epargne_credit,"(0.046, 0.075]",-0.3354,29.7
+ratio_epargne_credit,"(0.075, 0.116]",0.0756,35.1
+ratio_epargne_credit,"(0.116, 0.205]",0.83,44.9
+ratio_epargne_credit,"(0.205, inf]",1.6543,55.7
+duree_credit_mois,"(-inf, 6.0]",-0.6811,29.5
+duree_credit_mois,"(12.0, inf]",1.1035,41.6
+duree_credit_mois,"(6.0, 9.0]",0.2501,35.8
+duree_credit_mois,"(9.0, 12.0]",0.5705,38.0
+mensualite_fcfa,"(-inf, 26800.0]",0.7387,52.6
+mensualite_fcfa,"(112400.0, inf]",-0.8437,13.1
+mensualite_fcfa,"(26800.0, 44000.0]",0.5091,46.8
+mensualite_fcfa,"(44000.0, 67900.0]",0.4042,44.2
+mensualite_fcfa,"(67900.0, 112400.0]",-0.1698,29.9
+epargne_moyenne_fcfa,"(-inf, 19300.0]",-0.6942,31.2
+epargne_moyenne_fcfa,"(19300.0, 31900.0]",-0.2177,33.2
+epargne_moyenne_fcfa,"(31900.0, 52100.0]",0.0002,34.1
+epargne_moyenne_fcfa,"(52100.0, 91960.0]",0.4233,35.9
+epargne_moyenne_fcfa,"(91960.0, inf]",1.2121,39.3
+epargne_moyenne_fcfa,Manquant,0.0989,34.5
+historique_remboursement,Bon,0.521,49.5
+historique_remboursement,Mauvais,-0.9834,5.0
+historique_remboursement,Moyen,-0.0733,31.9
+historique_remboursement,Nouveau,-0.5673,17.3
+anciennete_membre_ans,"(-inf, 0.9]",-0.5051,27.4
+anciennete_membre_ans,"(0.9, 2.1]",-0.0604,33.3
+anciennete_membre_ans,"(2.1, 3.8]",-0.1605,32.0
+anciennete_membre_ans,"(3.8, 6.6]",0.2005,36.8
+anciennete_membre_ans,"(6.6, inf]",1.0322,47.9
+nombre_credits_anterieurs,"(-inf, 1.0]",-0.3681,33.6
+nombre_credits_anterieurs,"(1.0, 2.0]",-0.0364,34.1
+nombre_credits_anterieurs,"(2.0, 3.0]",0.1265,34.3
+nombre_credits_anterieurs,"(3.0, 5.0]",0.3801,34.7
+nombre_credits_anterieurs,"(5.0, inf]",0.9324,35.4
+revenu_mensuel_fcfa,"(-inf, 80000.0]",-0.4873,14.2
+revenu_mensuel_fcfa,"(107600.0, 139600.0]",-0.0841,30.7
+revenu_mensuel_fcfa,"(139600.0, 186300.0]",0.16,40.7
+revenu_mensuel_fcfa,"(186300.0, inf]",0.7885,66.3
+revenu_mensuel_fcfa,"(80000.0, 107600.0]",-0.0726,31.2
+revenu_mensuel_fcfa,Manquant,0.1244,39.2
+secteur_activite,Agriculture,-0.2706,28.3
+secteur_activite,Artisanat,0.2919,40.4
+secteur_activite,Commerce,0.0605,35.4
+secteur_activite,Elevage,-0.3005,27.6
+secteur_activite,Services,0.7531,50.4
+secteur_activite,Transformation agroalimentaire,0.0151,34.4
+secteur_activite,Transport,-0.1674,30.5
+volume_mm_mensuel_fcfa,"(-inf, 43960.848]",-0.3012,28.9
+volume_mm_mensuel_fcfa,"(114445.861, 185013.565]",0.3776,40.6
+volume_mm_mensuel_fcfa,"(185013.565, inf]",0.4079,41.1
+volume_mm_mensuel_fcfa,"(43960.848, 74181.765]",-0.1903,30.8
+volume_mm_mensuel_fcfa,"(74181.765, 114445.861]",-0.0725,32.9
+volume_mm_mensuel_fcfa,Manquant,-0.0188,33.8
+age,"(-inf, 29.0]",-0.3019,25.6
+age,"(29.0, 35.0]",0.1609,38.6
+age,"(35.0, 41.0]",0.2482,41.1
+age,"(41.0, 47.0]",-0.0052,34.0
+age,"(47.0, inf]",-0.0153,33.7
+montant_credit_fcfa,"(-inf, 234000.0]",0.3034,34.1
+montant_credit_fcfa,"(234000.0, 357600.0]",0.1503,34.1
+montant_credit_fcfa,"(357600.0, 526000.0]",-0.0109,34.1
+montant_credit_fcfa,"(526000.0, 797000.0]",-0.1039,34.1
+montant_credit_fcfa,"(797000.0, inf]",-0.2661,34.2
+anciennete_activite_ans,"(-inf, 1.3]",-0.1057,31.8
+anciennete_activite_ans,"(1.3, 3.1]",-0.1951,29.9
+anciennete_activite_ans,"(3.1, 5.6]",-0.1155,31.6
+anciennete_activite_ans,"(5.6, 9.6]",0.1328,37.0
+anciennete_activite_ans,"(9.6, inf]",0.3243,41.2
+anciennete_activite_ans,Manquant,0.3351,41.4
+pays,Benin,0.3552,44.1
+pays,Burkina Faso,-0.1663,29.4
+pays,Cote d'Ivoire,0.1544,38.5
+pays,Guinee-Bissau,-0.2686,26.6
+pays,Mali,0.0324,35.0
+pays,Niger,0.0787,36.3
+pays,Senegal,-0.1616,29.6
+pays,Togo,0.0091,34.4
+niveau_instruction,Aucun,-0.1729,30.8
+niveau_instruction,Primaire,0.0272,34.6
+niveau_instruction,Secondaire,0.0891,35.8
+niveau_instruction,Superieur,0.3856,41.4
+niveau_instruction,nan,0.2246,38.4

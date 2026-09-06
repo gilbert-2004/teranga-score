@@ -1,0 +1,47 @@
+BASE MICROCREDIT UEMOA, resume de controle
+==================================================
+Nombre de clients : 5000
+Nombre de variables : 30
+Taux de defaut : 11.8%
+
+Repartition par sexe :
+sexe
+Femme    0.621
+Homme    0.379
+
+Repartition par secteur :
+secteur_activite
+Commerce                          0.381
+Agriculture                       0.222
+Artisanat                         0.120
+Services                          0.090
+Elevage                           0.081
+Transformation agroalimentaire    0.057
+Transport                         0.049
+
+Revenu mensuel (FCFA) :
+count      4873.0
+mean     141439.0
+std       80631.0
+min       30000.0
+25%       86700.0
+50%      122300.0
+75%      173400.0
+max      854300.0
+
+Montant credit (FCFA) :
+count       5000.0
+mean      547619.0
+std       397452.0
+min        50000.0
+25%       261000.0
+50%       435500.0
+75%       714000.0
+max      2000000.0
+
+Taux de defaut par historique :
+historique_remboursement
+Bon        0.077
+Mauvais    0.255
+Moyen      0.123
+Nouveau    0.190
